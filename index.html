@@ -1,66 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .nav{
-            /* border: 2px solid green; */
-            background-color: transparent;
-            height: 70px;
-            position: relative;
-            padding: 30px;
-        }
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
-         .head{
-            position: absolute;
-            left: 10px;
-         }
-         .head1{
-            position: absolute;
-            right: 200px;
-         }
-         .head2{
-            position: absolute;
-            right: 120px;
-         }
-         .head3{
-            position: absolute;
-            right: 60px;
-         }
-        .nav ul{
-            display: flex;
-          
-            position: relative;
-            
-        }
-        .head4{
-            position: absolute;
-            right: 10px;
-        }
-       
-        li,a{
-            text-decoration: none; 
-           
-            list-style-type: none;
-            
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe Section</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; }
+    .subscribe-section {
+      width: 100vw;
+      height: 70vh;
+      background-image: url('https://storage.googleapis.com/a1aa/image/839363bd-d881-4026-8584-199dec6e0890.jpeg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+    .subscribe-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .subscribe-form input, .subscribe-form button {
+      padding: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      width: 250px;
+      max-width: 100%;
+    }
+    .subscribe-form button {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    .subscribe-form button:hover { background-color: #0056b3; }
+    .subscribe-text { margin-top: 20px; }
+    .subscribe-text h1 { font-size: 2.5rem; color: orange; }
+    .subscribe-text p { font-size: 1.2rem;color: white }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .subscribe-form input, .subscribe-form button { width: 80%; }
+      .subscribe-text h1 { font-size: 2rem; }
+      .subscribe-text p { font-size: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .subscribe-form input, .subscribe-form button { width: 100%; }
+      .subscribe-text h1 { font-size: 1.8rem; }
+      .subscribe-text p { font-size: 0.9rem; }
+    }
+  </style>
 </head>
 <body>
-    <div class="nav">
-        <ul>
-            <li ><a class="head" href=""><span style="color: purple; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 30px;">Jevelin</span> <span style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:orange;font-size: 17px;">wdng</span></a></li>
-            <li><a style="font-size: 20px;" class="head1" href="">Home</a></li>
-            <li><a style="font-size: 20px;" class="head2" href="">Portfoilo</a></li>
-            <li><a style="font-size: 20px;" class="head3" href="">Blog</a></li>
-            <li><a style="font-size: 20px;" class="head4" href="">Shop</a></li>
-        </ul>
+
+  <div class="subscribe-section">
+    
+    
+    <div class="subscribe-text">
+      <h1>Multi-purpose WordPress Theme</h1>
+      <p>Stunning website in your pocket!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Cras interdum sednibh sit amet accumsan.</p>
     </div>
+    <div class="subscribe-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button>Subscribe Now</button>
+      </div>
+  </div>
+
 </body>
 </html>

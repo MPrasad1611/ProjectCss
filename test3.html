@@ -15,7 +15,7 @@
       font-family: Arial, sans-serif;
     }
 
-    
+    /* Navbar Styles */
     .nav {
       position: fixed;
       top: 0;
@@ -62,7 +62,7 @@
       color: purple;
     }
 
-    /* Hero Section */
+    /* Main Container */
     .container {
       position: relative;
       width: 100%;
@@ -147,73 +147,22 @@
       }
     }
 
-   
-    .services-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 40px 20px;
-      background: white;
-      margin-top: 15px;
-    }
-
-    .service-block {
-      flex: 1 1 calc(33.333% - 20px);
-      max-width: calc(33.333% - 20px);
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      background-color: #ffffff;
-      text-align: center;
-    }
-
-    .service-block img {
-      width: 100%;
-      height: auto;
-    }
-
-    .service-content {
-      padding: 15px;
-    }
-
-    .service-title {
-      font-size: 1.5rem;
-      margin: 10px 0;
-      color: #333;
-    }
-
-    .service-description {
-      font-size: 1rem;
-      color: #777;
-    }
-
-    /* Responsive Design */
     @media (max-width: 768px) {
-      .service-block {
-        flex: 1 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
-      }
-
       .text {
         font-size: 1.5rem;
       }
     }
 
     @media (max-width: 480px) {
-      .service-block {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-
       .text {
         font-size: 1rem;
       }
     }
+
+    /* Responsive Block */
     .responsive-container {
        position: relative;
-       top: 40px;
+       top: 25px;
       text-align: center;
       font-family: sans-serif;
       padding: 20px;
@@ -264,44 +213,22 @@
     </div>
   </div>
 
-  <!-- Hero Section -->
+  <!-- Main Container -->
   <div class="container">
     <div class="text">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl93_qfxyeGDSufn0MvSMfshvYEGUJxAFzAA&s" alt="Wedding Logo">
-      <span style="color:rgb(50, 177, 128); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 25px;">Wedding Template For</span>
-      <span style="color: rgba(0, 149, 255, 0.873); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 50px;">Wedding Planners</span>
+      <span>Wedding Template For</span>
+      <span>Wedding Planners</span>
     </div>
   </div>
+
+  <!-- Responsive Div Block -->
   <div class="responsive-container">
     <div class="responsive-heading">Services We Provide</div>
     <div class="responsive-text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis varius cursus. Sed rhoncus, nisl non maximus molestie, erat quam tincidunt orci, fermentum fermentum risus enim ut nisl.
     </div>
   </div>
-
-  <div class="services-section">
-    <div class="service-block">
-      <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_1.jpg" alt="Service 1">
-      <div class="service-content">
-        <h3 class="service-title">Fully Responsive</h3>
-        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis varius cursus.</p>
-      </div>
-    </div>
-    <div class="service-block">
-      <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_2.jpg" alt="Service 2">
-      <div class="service-content">
-        <h3 class="service-title">Friendly Support</h3>
-        <p class="service-description">Proin non nunc non enim dictum vulputate. Aliquam augue tortor, fringilla ac porttitor.</p>
-      </div>
-    </div>
-    <div class="service-block">
-      <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_3.jpg" alt="Service 3">
-      <div class="service-content">
-        <h3 class="service-title">Highly Customizable</h3>
-        <p class="service-description">Curabitur cursus lectus sollicitudin eros ornare pulvinar. Nulla facilisi.</p>
-      </div>
-    </div>
-  </div>
-
+  
 </body>
 </html>
