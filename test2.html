@@ -1,410 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Template</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-    }
-    ::-webkit-scrollbar {
-      overflow: hidden;
-    }
-
-  
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      z-index: 1;
-      background-color:white;
-      transition: background-color 0.5s ease;
-    }
-    .container-button{
-          padding: 20px;
-          border-radius: 30px;
-          color: white;
-          background-color: orange;
-          border: transparent;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Template</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    .nav.scrolled {
-      background-color: rgb(205, 205, 205);
-    }
-    .logo {
-      font-size: 1.5rem;
-      color: purple;
-      font-weight: bold;
-    }
-    .logo span {
-      color: orange;
-      font-size: 1rem;
-      font-weight: normal;
-    }
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: blue;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-    .nav-links a:hover {
-      color: purple;
-    }
-
-    /* Hero Section */
-    .container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url("https://storage.googleapis.com/a1aa/image/4dc2b9e6-15e1-48f0-98c9-afc01342b22c.jpeg")
-        no-repeat center center/cover;
-      animation: zoom 10s infinite alternate;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    @keyframes zoom {
-      0% {
-        transform: scale(1);
+      body {
+        font-family: Arial, sans-serif;
       }
-      100% {
+      ::-webkit-scrollbar {
+        overflow: hidden;
+      }
+
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        z-index: 1;
+        background-color: white;
+        transition: background-color 0.5s ease;
+      }
+      .container-button {
+        padding: 20px;
+        border-radius: 30px;
+        color: white;
+        background-color: orange;
+        border: transparent;
+      }
+      .nav.scrolled {
+        background-color: rgb(205, 205, 205);
+      }
+      .logo {
+        font-size: 1.5rem;
+        color: purple;
+        font-weight: bold;
+      }
+      .logo span {
+        color: orange;
+        font-size: 1rem;
+        font-weight: normal;
+      }
+      .nav-links {
+        display: flex;
+        gap: 20px;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: blue;
+        font-size: 1rem;
+        transition: color 0.3s;
+      }
+      .nav-links a:hover {
+        color: purple;
+      }
+
+      /* Hero Section */
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: url("https://storage.googleapis.com/a1aa/image/4dc2b9e6-15e1-48f0-98c9-afc01342b22c.jpeg")
+          no-repeat center center/cover;
+        animation: zoom 10s infinite alternate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @keyframes zoom {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+
+      .text {
+        position: absolute;
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        text-transform: uppercase;
+        opacity: 0;
+        animation: fadeIn 3s forwards, slideIn 6s forwards;
+      }
+
+      .text img {
+        border-radius: 10px;
+        width: 150px;
+        animation: slideDown 2s forwards ease-out;
+      }
+      .text span {
+        display: block;
+      }
+      .text span:nth-child(1) {
+        animation-delay: 1s;
+        color: rgb(50, 177, 128);
+        font-size: 25px;
+      }
+
+      .text span:nth-child(2) {
+        animation-delay: 3s;
+        color: rgba(0, 149, 255, 0.873);
+        font-size: 50px;
+      }
+
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      /* Portfolio Section */
+      .portfolio-section {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: white;
+      }
+
+      .portfolio-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .portfolio-description {
+        font-size: 1rem;
+        color: #888;
+        margin-bottom: 20px;
+      }
+
+      .divider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #ddd;
+      }
+
+      .divider-line {
+        width: 50px;
+        height: 1px;
+        background-color: #ddd;
+      }
+
+      .divider-dot {
+        width: 10px;
+        height: 10px;
+        background-color: #ddd;
+        border-radius: 50%;
+      }
+      .responsive-container {
+        position: relative;
+        top: 40px;
+        text-align: center;
+        font-family: sans-serif;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 600px;
+      }
+
+      .responsive-heading {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .responsive-text {
+        font-size: 1em;
+        color: gray;
+      }
+
+      @media (max-width: 768px) {
+        .responsive-heading {
+          font-size: 1.5em;
+        }
+
+        .responsive-text {
+          font-size: 0.9em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .responsive-heading {
+          font-size: 1.2em;
+        }
+
+        .responsive-text {
+          font-size: 0.8em;
+        }
+      }
+
+      /* Services Section */
+      .services-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 40px 20px;
+        background: white;
+      }
+
+      .service-block {
+        flex: 1 1 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        text-align: center;
+      }
+
+      .service-block img {
+        width: 100%;
+        height: auto;
+      }
+
+      .service-content {
+        padding: 15px;
+      }
+
+      .service-title {
+        font-size: 1.5rem;
+        margin: 10px 0;
+        color: #333;
+      }
+      .service-description {
+        font-size: 1rem;
+        color: #777;
+      }
+
+      /* Subscribe Section */
+      .subscribe-section {
+        width: 100vw;
+        height: 70vh;
+        background-image: url("https://storage.googleapis.com/a1aa/image/839363bd-d881-4026-8584-199dec6e0890.jpeg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+      }
+
+      .subscribe-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .subscribe-form input,
+      .subscribe-form button {
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        width: 250px;
+        max-width: 100%;
+      }
+
+      .subscribe-form button {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+      .subscribe-form button:hover {
+        background-color: #0056b3;
+      }
+
+      .subscribe-text h1 {
+        font-size: 2.5rem;
+        color: orange;
+      }
+      .subscribe-text p {
+        font-size: 1.2rem;
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        .text {
+          font-size: 1.5rem;
+        }
+        .portfolio-title {
+          font-size: 1.5rem;
+        }
+        .subscribe-form input,
+        .subscribe-form button {
+          width: 80%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .text {
+          font-size: 1rem;
+        }
+        .portfolio-title {
+          font-size: 1.2rem;
+        }
+        .subscribe-form input,
+        .subscribe-form button {
+          width: 100%;
+        }
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        justify-content: center;
+        justify-items: center;
+        padding: 20px;
+      }
+
+      .card {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .card img {
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .card .content {
+        display: grid;
+        justify-content: center;
+        padding: 15px;
+      }
+
+      .card .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .card .category {
+        display: grid;
+        justify-content: center;
+        color: #888;
+        font-size: 0.9rem;
+      }
+      .card:hover img {
         transform: scale(1.1);
       }
-    }
-
-    .text {
-      position: absolute;
-      text-align: center;
-      color: white;
-      font-size: 2rem;
-      text-transform: uppercase;
-      opacity: 0;
-      animation: fadeIn 3s forwards, slideIn 6s forwards;
-    }
-
-    .text img {
-      border-radius: 10px;
-      width: 150px;
-      animation: slideDown 2s forwards ease-out;
-    }
-    .text span {
-      display: block;
-    }
-    .text span:nth-child(1) {
-      animation-delay: 1s;
-      color: rgb(50, 177, 128);
-      font-size: 25px;
-    }
-
-    .text span:nth-child(2) {
-      animation-delay: 3s;
-      color: rgba(0, 149, 255, 0.873);
-      font-size: 50px;
-    }
-
-    @keyframes slideDown {
-      0% {
-        transform: translateY(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    @keyframes slideIn {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-    /* Portfolio Section */
-    .portfolio-section {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: white;
-    }
-
-    .portfolio-title {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .portfolio-description {
-      font-size: 1rem;
-      color: #888;
-      margin-bottom: 20px;
-    }
-
-    .divider {
+      .wrapper {
       display: flex;
-      justify-content: center;
+      
+      justify-content: space-between;
       align-items: center;
-      gap: 10px;
-      color: #ddd;
-    }
-
-    .divider-line {
-      width: 50px;
-      height: 1px;
-      background-color: #ddd;
-    }
-
-    .divider-dot {
-      width: 10px;
-      height: 10px;
-      background-color: #ddd;
-      border-radius: 50%;
-    }
-    .responsive-container {
-       position: relative;
-       top: 40px;
-      text-align: center;
-      font-family: sans-serif;
-      padding: 20px;
-      margin: 0 auto;
-      max-width: 600px;
-    }
-
-    .responsive-heading {
-      font-size: 2em;
-      font-weight: bold;
-    }
-
-    .responsive-text {
-      font-size: 1em;
-      color: gray;
-    }
-
-    @media (max-width: 768px) {
-      .responsive-heading {
-        font-size: 1.5em;
-      }
-
-      .responsive-text {
-        font-size: 0.9em;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .responsive-heading {
-        font-size: 1.2em;
-      }
-
-      .responsive-text {
-        font-size: 0.8em;
-      }
-    }
-
-    /* Services Section */
-    .services-section {
-      display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 40px 20px;
-      background: white;
-    }
-
-    .service-block {
-      flex: 1 1 calc(33.333% - 20px);
-      max-width: calc(33.333% - 20px);
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      background-color: #ffffff;
-      text-align: center;
-    }
-
-    .service-block img {
-      width: 100%;
-      height: auto;
-    }
-
-    .service-content {
-      padding: 15px;
-    }
-
-    .service-title {
-      font-size: 1.5rem;
-      margin: 10px 0;
-      color: #333;
-    }
-    .service-description {
-      font-size: 1rem;
-      color: #777;
-    }
-
-    /* Subscribe Section */
-    .subscribe-section {
-      width: 100vw;
-      height: 70vh;
-      background-image: url("https://storage.googleapis.com/a1aa/image/839363bd-d881-4026-8584-199dec6e0890.jpeg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
-
-    .subscribe-form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .subscribe-form input,
-    .subscribe-form button {
       padding: 10px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      width: 250px;
-      max-width: 100%;
+      text-align: center;
     }
-
-    .subscribe-form button {
-      background-color: #007bff;
+    .info-text {
+      flex: 1;
+      margin-left: 5px;
+      font-size: 16px;
+      min-width: 200px;
+    }
+    .cta-button {
+      background-color: #c48e5f;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
       color: white;
       cursor: pointer;
-    }
-    .subscribe-form button:hover {
-      background-color: #0056b3;
-    }
-
-    .subscribe-text h1 {
-      font-size: 2.5rem;
-      color: orange;
-    }
-    .subscribe-text p {
-      font-size: 1.2rem;
-      color: white;
+      margin: 5px;
+      min-width: 120px;
     }
 
- 
     @media (max-width: 768px) {
-      .text {
-        font-size: 1.5rem;
+      .info-text{
+        font-size: 14px;
       }
-      .portfolio-title {
-        font-size: 1.5rem;
-      }
-      .subscribe-form input,
-      .subscribe-form button {
-        width: 80%;
+      .cta-button {
+        padding: 8px 16px;
       }
     }
 
     @media (max-width: 480px) {
-      .text {
-        font-size: 1rem;
+      .wrapper {
+        flex-direction: column;
       }
-      .portfolio-title {
-        font-size: 1.2rem;
+      .info-text {
+        font-size: 12px;
+        margin-bottom: 10px;
       }
-      .subscribe-form input,
-      .subscribe-form button {
+      .cta-button {
         width: 100%;
+        padding: 10px;
       }
     }
-    .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            justify-items: center;
-            padding: 20px;
-        }
-   
-        .card {
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .card img {
-            width: 250px;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .card .content {
-          display: grid;
-          justify-content: center;
-            padding: 15px;
-        }
-
-        .card .title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .card .category {
-          display: grid;
-          justify-content: center;
-            color: #888;
-            font-size: 0.9rem;
-        }
-     .card:hover img {
-    transform: scale(1.1);
-     }
-  </style>
-</head>
-<body>
-  <div class="nav">
-    <div class="logo">Jevelin <span>wdng</span></div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#port">Portfolio</a>
-      <a href="#blog">Blog</a>
-      <a href="#shop">Shop</a>
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo">Jevelin <span>wdng</span></div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#port">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="#shop">Shop</a>
+      </div>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="text">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl93_qfxyeGDSufn0MvSMfshvYEGUJxAFzAA&s" alt="Wedding Logo" />
-      <span
+    <div class="container">
+      <div class="text">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl93_qfxyeGDSufn0MvSMfshvYEGUJxAFzAA&s"
+          alt="Wedding Logo"
+        />
+        <span
           style="
             color: rgb(50, 177, 128);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -421,112 +470,145 @@
           "
           >Wedding Planners</span
         >
-      <button class="container-button">TAKE IT FOR SPIN</button>
-    </div>
-  </div>
-
-  <div class="responsive-container">
-    <div class="responsive-heading">Services We Provide</div>
-    <div class="responsive-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis varius cursus. Sed rhoncus, nisl non maximus molestie, erat quam tincidunt orci, fermentum fermentum risus enim ut nisl.
-    </div>
-  </div>
-
-
-  <div class="services-section">
-    <div class="service-block">
-      <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_1.jpg" alt="Service 1" />
-      <div class="service-content">
-        <h3 class="service-title">Fully Responsive</h3>
-        <p class="service-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
+        <button class="container-button">TAKE IT FOR SPIN</button>
       </div>
     </div>
-    <div class="service-block">
-      <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_2.jpg" alt="Service 2" />
-      <div class="service-content">
-        <h3 class="service-title">Friendly Support</h3>
-        <p class="service-description">
-          Proin non nunc non enim dictum vulputate.
-        </p>
-      </div>
-    </div>
-    <div class="service-block">
-      <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_3.jpg" alt="Service 3" />
-      <div class="service-content">
-        <h3 class="service-title">Highly Customizable</h3>
-        <p class="service-description">
-          Curabitur cursus lectus sollicitudin eros ornare pulvinar.
-        </p>
-      </div>
-    </div>
-  </div>
 
-  <div class="subscribe-section">
-    <div class="subscribe-text">
-      <h1>Multi-purpose WordPress Theme</h1>
-      <p>Stunning website in your pocket!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="responsive-container">
+      <div class="responsive-heading">Services We Provide</div>
+      <div class="responsive-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        iaculis varius cursus. Sed rhoncus, nisl non maximus molestie, erat quam
+        tincidunt orci, fermentum fermentum risus enim ut nisl.
+      </div>
     </div>
-    <div class="subscribe-form">
-      <input type="email" placeholder="Enter your email" required />
-      <button>Subscribe Now</button>
-    </div>
-  </div>
-  <div class="portfolio-section">
-    <h2 class="portfolio-title">Portfolio & Gallery</h2>
-    <p class="portfolio-description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </p>
-    <div class="divider">
-      <div class="divider-line"></div>
-      <div class="divider-dot"></div>
-      <div class="divider-line"></div>
-    </div>
-  </div>
-  <div class="grid">
-    <div class="card">
-        <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img1-951x1024.jpg" alt="Hugs & Kisses">
-        <div class="content">
-            <h3 class="title">Hugs & Kisses</h3>
-            <p class="category">PEOPLE</p>
+
+    <div class="services-section">
+      <div class="service-block">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_1.jpg"
+          alt="Service 1"
+        />
+        <div class="service-content">
+          <h3 class="service-title">Fully Responsive</h3>
+          <p class="service-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
         </div>
+      </div>
+      <div class="service-block">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_2.jpg"
+          alt="Service 2"
+        />
+        <div class="service-content">
+          <h3 class="service-title">Friendly Support</h3>
+          <p class="service-description">
+            Proin non nunc non enim dictum vulputate.
+          </p>
+        </div>
+      </div>
+      <div class="service-block">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_3.jpg"
+          alt="Service 3"
+        />
+        <div class="service-content">
+          <h3 class="service-title">Highly Customizable</h3>
+          <p class="service-description">
+            Curabitur cursus lectus sollicitudin eros ornare pulvinar.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="card">
-        <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img2-1024x784.jpg" alt="Every Guest Counts">
+
+    <div class="subscribe-section">
+      <div class="subscribe-text">
+        <h1>Multi-purpose WordPress Theme</h1>
+        <p>Stunning website in your pocket!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="subscribe-form">
+        <input type="email" placeholder="Enter your email" required />
+        <button>Subscribe Now</button>
+      </div>
+    </div>
+    <div class="portfolio-section">
+      <h2 class="portfolio-title">Portfolio & Gallery</h2>
+      <p class="portfolio-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+        <div class="divider-line"></div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img1-951x1024.jpg"
+          alt="Hugs & Kisses"
+        />
         <div class="content">
-            <h3 class="title">Every Guest Counts</h3>
-            <p class="category">PEOPLE</p>
-            </div>
-       </div>
-       <div class="card">
-        <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img3-1024x962.jpg" alt="The bouquet">
+          <h3 class="title">Hugs & Kisses</h3>
+          <p class="category">PEOPLE</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img2-1024x784.jpg"
+          alt="Every Guest Counts"
+        />
         <div class="content">
-            <h3 class="title">The Bouquet</h3>
-            <p class="category">ART</p>
-            </div>
-       </div>
-       <div class="card">
-        <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img4-1024x962.jpg" alt="Pretty tag">
+          <h3 class="title">Every Guest Counts</h3>
+          <p class="category">PEOPLE</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img3-1024x962.jpg"
+          alt="The bouquet"
+        />
         <div class="content">
-            <h3 class="title">Pretty Tag</h3>
-            <p class="category">DECORATIONS</p>
-            </div>
-       </div>
-       <div class="card">
-        <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img5-951x1024.jpg" alt="Love & SunSet">
+          <h3 class="title">The Bouquet</h3>
+          <p class="category">ART</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img4-1024x962.jpg"
+          alt="Pretty tag"
+        />
         <div class="content">
-            <h3 class="title">Love & SunSet</h3>
-            <p class="category">ART</p>
-            </div>
-       </div>
-       <div class="card">
-        <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img6-853x1024.jpg" alt="Every Guest Counts">
+          <h3 class="title">Pretty Tag</h3>
+          <p class="category">DECORATIONS</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img5-951x1024.jpg"
+          alt="Love & SunSet"
+        />
         <div class="content">
-            <h3 class="title">Kissing The Bride</h3>
-            <p class="category">PHOTOGRAPHY</p>
-            </div>
-       </div>
-</body>
+          <h3 class="title">Love & SunSet</h3>
+          <p class="category">ART</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img6-853x1024.jpg"
+          alt="Every Guest Counts"
+        />
+        <div class="content">
+          <h3 class="title">Kissing The Bride</h3>
+          <p class="category">PHOTOGRAPHY</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <p class="info-text">Want to see more images? Just press “All images” on the right side!</p>
+      <button class="cta-button">All Images</button>
+    </div>
+  </body>
 </html>
