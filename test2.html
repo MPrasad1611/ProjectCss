@@ -707,7 +707,95 @@
         }
         .custom-carousel .nav-buttons-2 span:hover {
             color: #007bff;
-            background-color: #e9ecef;
+           background-color: #e9ecef;
+        }
+        .pricing-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .pricing-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .pricing-section p {
+            color: #777;
+            margin-bottom: 50px;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 350px;
+            width: 100%;
+            text-align: center;
+            height: 500px; /* Increased height */
+        }
+
+        .pricing-card.highlight {
+            background: url('path/to/your/image.jpg') center/cover no-repeat; /* Added background image */
+            color: #fff;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.8em;
+            margin: 15px 0;
+        }
+
+        .pricing-card .price {
+            font-size: 3em;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .pricing-card ul li {
+            margin: 15px 0;
+            color: #555;
+            border-bottom: 1px solid #ddd; /* Divider line */
+            padding-bottom: 10px;
+        }
+
+        .pricing-card ul li.unavailable {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+
+        .pricing-card button {
+            padding: 15px 30px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .pricing-card button:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
   </head>
@@ -987,7 +1075,65 @@
         </div>
     </div>
     
-    
+    <section class="pricing-section">
+      <h1>Price List & Special Offers</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  
+      <div class="pricing-container">
+          <div class="pricing-card">
+              <h3>Basic</h3>
+              <p class="price">$42</p>
+              <ul>
+                  <li>Clean Design</li>
+                  <li>Database</li>
+                  <li>Users</li>
+                  <li class="unavailable">Multi-Purpose</li>
+                  <li>Light & Fast</li>
+              </ul>
+              <button>Purchase</button>
+          </div>
+  
+          <div class="pricing-card highlight">
+              <h3>Value</h3>
+              <p class="price">$56</p>
+              <ul>
+                  <li>Clean Design</li>
+                  <li>Database</li>
+                  <li>Users</li>
+                  <li class="unavailable">Multi-Purpose</li>
+                  <li>Light & Fast</li>
+              </ul>
+              <button>Purchase</button>
+          </div>
+  
+          <div class="pricing-card">
+              <h3>Premium</h3>
+              <p class="price">$77</p>
+              <ul>
+                  <li>Clean Design</li>
+                  <li>Database</li>
+                  <li>Users</li>
+                  <li class="unavailable">Multi-Purpose</li>
+                  <li>Light & Fast</li>
+              </ul>
+              <button>Purchase</button>
+          </div>
+  
+          <div class="pricing-card">
+              <h3>All-in-One</h3>
+              <p class="price">$145</p>
+              <ul>
+                  <li>Clean Design</li>
+                  <li>Database</li>
+                  <li>Users</li>
+                  <li>Multi-Purpose</li>
+                  <li>Light & Fast</li>
+              </ul>
+              <button>Purchase</button>
+          </div>
+      </div>
+  </section>
+  
     
   </body>
 </html>
