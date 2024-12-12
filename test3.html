@@ -3,203 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Template</title>
+  <title>Grooms Tips with Animation</title>
   <style>
-    /* Global Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
+      line-height: 1.6;
     }
 
-    ::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Navbar Styling */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      z-index: 10;
-      background-color: white;
-      transition: background-color 0.5s ease;
-    }
-
-    .nav.scrolled {
-      background-color: #ddd;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      color: purple;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: orange;
-      font-size: 1rem;
-      font-weight: normal;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: blue;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: purple;
-    }
-
-    /* Hero Section */
     .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .image-wrapper {
       position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url("https://storage.googleapis.com/a1aa/image/4dc2b9e6-15e1-48f0-98c9-afc01342b22c.jpeg") no-repeat center center/cover;
-      animation: zoom 10s infinite alternate;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: url('your-image.jpg') no-repeat center center/cover;
+      height: 400px;
     }
 
-    @keyframes zoom {
-      0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1.1);
-      }
-    }
-
-    .text {
+    .text-overlay {
       position: absolute;
-      text-align: center;
+      bottom: 10%;
+      left: 10%;
       color: white;
-      font-size: 2rem;
-      text-transform: uppercase;
-      animation: fadeIn 3s forwards, slideIn 6s forwards;
-    }
-
-    .text img {
-      border-radius: 10px;
-      width: 150px;
-      animation: slideDown 2s forwards ease-out;
-    }
-
-    .container-button {
-      padding: 10px 20px;
-      border-radius: 30px;
-      color: white;
-      background-color: orange;
-      border: none;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    /* Responsive Text Section */
-    .container-responsive {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.5);
       text-align: center;
     }
 
-    .text-responsive {
-      flex: 1;
-      margin: 5px;
-      font-size: 16px;
-      min-width: 200px;
+    .text-overlay span {
+      font-size: 1.2rem;
+      color: #f4a460;
     }
 
-    .button {
-      background-color: #c48e5f;
-      border: none;
-      border-radius: 20px;
-      padding: 10px 20px;
-      color: white;
-      cursor: pointer;
-      margin: 5px;
-      min-width: 120px;
+    .text-overlay h1 {
+      font-size: 2.5rem;
+      margin: 0;
     }
 
-    /* Media Queries for Responsiveness */
+    @keyframes slide-in {
+  from {
+    transform: translateX(-100%); /* Start off-screen on the left */
+  }
+  to {
+    transform: translateX(0); /* End at the normal position */
+  }
+}
+
+.content-wrapper {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  animation: slide-in 5s ease-out forwards;
+}
+
+    
+    .content-wrapper h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      width: 50px;
+      height: 4px;
+      background: #f4a460;
+      margin: 0.5rem 0;
+    }
+
+    .content-wrapper p {
+      margin: 0.5rem 0;
+    }
+
     @media (max-width: 768px) {
-      .text {
-        font-size: 1.5rem;
-      }
-      .container-button {
-        padding: 8px 16px;
-      }
-      .text-responsive {
-        font-size: 14px;
-      }
-      .button {
-        width: 80%;
-        padding: 8px 16px;
-      }
-    }
-
-    @media (max-width: 480px) {
       .container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
       }
-      .text {
-        font-size: 1rem;
-      }
-      .text-responsive {
-        font-size: 12px;
-        margin-bottom: 10px;
-      }
-      .button {
-        width: 100%;
-        padding: 10px;
+
+      .image-wrapper {
+        height: 300px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <div class="logo">Jevelin <span>wdng</span></div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#port">Portfolio</a>
-      <a href="#blog">Blog</a>
-      <a href="#shop">Shop</a>
+  <div class="container-3">
+    
+    <div class="content-wrapper-2">
+      <h2>Title for the masses</h2>
+      <div class="divider"></div>
+      <div class="feature">
+        <h2>Responsive design</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum sed nibh sit amet accumsan. Suspendisse posuere congue ante quis fringilla.</p>
+      </div>
+      <div class="feature">
+        <h2>One click install</h2>
+        <p>Suspendisse dignissim, turpis sed pellentesque semper, enim lacus pulvinar augue, non posuere tellus ex quis risus.</p>
+      </div>
+      <div class="feature">
+        <h2>Multi-purpose</h2>
+        <p>Proin nisl nibh, venenatis ut bibendum vel, mollis sit amet nibh. Integer iaculis justo lorem, maximus tristique elit venenatis nec.</p>
+      </div>
     </div>
-  </div>
-
-  <div class="container">
-    <div class="text">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl93_qfxyeGDSufn0MvSMfshvYEGUJxAFzAA&s" alt="Wedding Logo" />
-      <span style="color: rgb(50, 177, 128); font-family: 'Segoe UI', sans-serif;">Wedding Template For</span>
-      <span style="color: rgba(0, 149, 255, 0.873); font-family: 'Trebuchet MS', sans-serif;">Wedding Planners</span>
-      <button class="container-button">Take It For A Spin</button>
+    <div class="image-wrapper-2">
+      <div class="text-overlay">
+        <span>Best tips for</span>
+        <h1>grooms</h1>
+      </div>
     </div>
-  </div>
-
-  <div class="container-responsive">
-    <p class="text-responsive">Want to see more images? Just press “All images” on the right side!</p>
-    <button class="button">All Images</button>
   </div>
 </body>
 </html>

@@ -388,7 +388,7 @@
       }
       .wrapper {
       display: flex;
-      
+      text-align: center;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
@@ -434,6 +434,123 @@
         padding: 10px;
       }
     }
+    .container-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      
+      max-width: 1200px;
+      margin: auto;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .image-wrapper {
+     
+      position: relative;
+      background: url("https://i.pinimg.com/736x/82/ea/dd/82eaddc5202eb576dc054a9ee2153d76.jpg") no-repeat center center/cover;
+      border: 2px solid ;
+      height: 400px;
+    }
+
+    .text-overlay {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      bottom: 30%;
+      left: 30%;
+      color: white;
+      background: rgba(199, 156, 156, 0.204);
+      padding: 1rem;
+      border: 1px solid white;
+      text-align: center;
+    }
+
+    .text-overlay span {
+      font-size: 1.2rem;
+      color: #f4a460;
+    }
+
+    .text-overlay h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .content-wrapper {
+      background: #fff;
+      height: 400px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateX(100%);
+      animation: slides-in 5s forwards;
+    }
+    @keyframes slides-in {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+
+    .content-wrapper h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      width: 50px;
+      height: 4px;
+      background: #f4a460;
+      margin: 0.5rem 0;
+    }
+
+    .content-wrapper p {
+      margin: 0.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .container-2 {
+        grid-template-columns: 1fr;
+      }
+      .image-wrapper {
+        height: 300px;
+      } 
+    }
+    @media (max-width: 425px) {
+  .container-2 {
+    grid-template-columns: 1fr; 
+    padding: 1rem; 
+  }
+  .text-overlay{
+    position: absolute;
+    left: 18%;
+  }
+   .image-wrapper {
+    height: 250px; 
+  } 
+  
+  .content-wrapper {
+    padding: 1rem; 
+  }
+}
+@media (max-width: 767px) {
+  .container-2 {
+    grid-template-columns: 1fr; 
+    padding: 1rem; 
+  }
+
+  /* .image-wrapper {
+    height: 200px; 
+  }  */
+
+  .content-wrapper {
+    padding: 1rem; 
+    
+  }
+}
     </style>
   </head>
   <body>
@@ -609,6 +726,29 @@
     <div class="wrapper">
       <p class="info-text">Want to see more images? Just press “All images” on the right side!</p>
       <button class="cta-button">All Images</button>
+    </div>
+    <div class="container-2">
+      <div class="image-wrapper">
+        <div class="text-overlay">
+          <span>Best tips for</span>
+          <h1>grooms</h1>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <h2>Title for the masses</h2>
+        <div class="divider"></div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum sed nibh sit amet accumsan. 
+          Suspendisse posuere congue ante quis fringilla. Suspendisse dignissim, turpis sed pellentesque semper, 
+          enim lacus pulvinar augue, non posuere tellus ex quis risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum sed nibh sit amet accumsan. 
+          Suspendisse posuere congue ante quis fringilla. Suspendisse dignissim, turpis sed pellentesque semper, 
+          enim lacus pulvinar augue, non posuere tellus ex quis risus.
+        </p>
+        <p>
+          Proin nisl nibh, venenatis ut bibendum vel, mollis sit amet nibh. Integer iaculis justo lorem, maximus 
+          tristique elit venenatis nec.
+        </p>
+      </div>
     </div>
   </body>
 </html>
