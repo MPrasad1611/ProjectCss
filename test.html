@@ -1,307 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Integrated Template</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      z-index: 1000;
-      background-color: rgba(255, 255, 255, 0.2);
-      transition: background-color 0.5s ease;
-    }
-
-    .nav.scrolled {
-      background-color: rgb(205, 205, 205);
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      color: purple;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: orange;
-      font-size: 1rem;
-      font-weight: normal;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: blue;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: purple;
-    }
-
-    /* Hero Section */
-    .container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url("https://storage.googleapis.com/a1aa/image/4dc2b9e6-15e1-48f0-98c9-afc01342b22c.jpeg")
-        no-repeat center center/cover;
-      animation: zoom 10s infinite alternate;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    @keyframes zoom {
-      0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1.1);
-      }
-    }
-
-    .text {
-      position: absolute;
-      text-align: center;
-      color: white;
-      font-size: 2rem;
-      text-transform: uppercase;
-      opacity: 0;
-      animation: fadeIn 3s forwards, slideIn 6s forwards;
-    }
-
-    .text img {
-      border-radius: 10px;
-      width: 150px;
-      animation: slideDown 2s forwards ease-out;
-    }
-
-    .text span {
-      display: block;
-    }
-
-    .text span:nth-child(1) {
-      animation-delay: 1s;
-      color: rgb(50, 177, 128);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 25px;
-    }
-
-    .text span:nth-child(2) {
-      animation-delay: 3s;
-      color: rgba(0, 149, 255, 0.873);
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      font-size: 50px;
-    }
-
-    @keyframes slideDown {
-      0% {
-        transform: translateY(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideIn {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-
-   
-    .services-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 40px 20px;
-      background: white;
-      margin-top: 15px;
-    }
-
-    .service-block {
-      flex: 1 1 calc(33.333% - 20px);
-      max-width: calc(33.333% - 20px);
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      background-color: #ffffff;
-      text-align: center;
-    }
-
-    .service-block img {
-      width: 100%;
-      height: auto;
-    }
-
-    .service-content {
-      padding: 15px;
-    }
-
-    .service-title {
-      font-size: 1.5rem;
-      margin: 10px 0;
-      color: #333;
-    }
-
-    .service-description {
-      font-size: 1rem;
-      color: #777;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .service-block {
-        flex: 1 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
-      }
-
-      .text {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .service-block {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-
-      .text {
-        font-size: 1rem;
-      }
-    }
-    .responsive-container {
-       position: relative;
-       top: 40px;
-      text-align: center;
-      font-family: sans-serif;
-      padding: 20px;
-      margin: 0 auto;
-      max-width: 600px;
-    }
-
-    .responsive-heading {
-      font-size: 2em;
-      font-weight: bold;
-    }
-
-    .responsive-text {
-      font-size: 1em;
-      color: gray;
-    }
-
-    @media (max-width: 768px) {
-      .responsive-heading {
-        font-size: 1.5em;
-      }
-
-      .responsive-text {
-        font-size: 0.9em;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .responsive-heading {
-        font-size: 1.2em;
-      }
-
-      .responsive-text {
-        font-size: 0.8em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Reviews Carousel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="nav">
-    <div class="logo">Jevelin <span>wdng</span></div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#port">Portfolio</a>
-      <a href="#blog">Blog</a>
-      <a href="#shop">Shop</a>
+    <div class="container mt-5">
+        <h2 class="text-center">Client Reviews</h2>
+        <p class="text-center text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        
+        <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Reviewer 1">
+                        <h5 class="text-warning">99</h5>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit augue ac enim varius bibendum.</p>
+                        <p class="fw-bold">- Bershtain Saal</p>
+                    </div>
+                </div>
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Reviewer 2">
+                        <h5 class="text-warning">99</h5>
+                        <p class="text-muted">Etiam rhoncus elit aliquam facilisis pharetra. Vivamus facilisis lacus non velit suscipit pellentesque.</p>
+                        <p class="fw-bold">- Elizabeth Bazooka</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
-  </div>
-
-  <!-- Hero Section -->
-  <div class="container">
-    <div class="text">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl93_qfxyeGDSufn0MvSMfshvYEGUJxAFzAA&s" alt="Wedding Logo">
-      <span style="color:rgb(50, 177, 128); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 25px;">Wedding Template For</span>
-      <span style="color: rgba(0, 149, 255, 0.873); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 50px;">Wedding Planners</span>
-    </div>
-  </div>
-  <div class="responsive-container">
-    <div class="responsive-heading">Services We Provide</div>
-    <div class="responsive-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis varius cursus. Sed rhoncus, nisl non maximus molestie, erat quam tincidunt orci, fermentum fermentum risus enim ut nisl.
-    </div>
-  </div>
-
-  <div class="services-section">
-    <div class="service-block">
-      <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_1.jpg" alt="Service 1">
-      <div class="service-content">
-        <h3 class="service-title">Fully Responsive</h3>
-        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis varius cursus.</p>
-      </div>
-    </div>
-    <div class="service-block">
-      <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_2.jpg" alt="Service 2">
-      <div class="service-content">
-        <h3 class="service-title">Friendly Support</h3>
-        <p class="service-description">Proin non nunc non enim dictum vulputate. Aliquam augue tortor, fringilla ac porttitor.</p>
-      </div>
-    </div>
-    <div class="service-block">
-      <img src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_3.jpg" alt="Service 3">
-      <div class="service-content">
-        <h3 class="service-title">Highly Customizable</h3>
-        <p class="service-description">Curabitur cursus lectus sollicitudin eros ornare pulvinar. Nulla facilisi.</p>
-      </div>
-    </div>
-  </div>
-
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

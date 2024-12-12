@@ -1,123 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grooms Tips with Animation</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      max-width: 1200px;
-      margin: auto;
-      gap: 2rem;
-      padding: 1rem;
-    }
-
-    .image-wrapper {
-      position: relative;
-      background: url('your-image.jpg') no-repeat center center/cover;
-      height: 400px;
-    }
-
-    .text-overlay {
-      position: absolute;
-      bottom: 10%;
-      left: 10%;
-      color: white;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 1rem;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      text-align: center;
-    }
-
-    .text-overlay span {
-      font-size: 1.2rem;
-      color: #f4a460;
-    }
-
-    .text-overlay h1 {
-      font-size: 2.5rem;
-      margin: 0;
-    }
-
-    @keyframes slide-in {
-  from {
-    transform: translateX(-100%); /* Start off-screen on the left */
-  }
-  to {
-    transform: translateX(0); /* End at the normal position */
-  }
-}
-
-.content-wrapper {
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  animation: slide-in 5s ease-out forwards;
-}
-
-    
-    .content-wrapper h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .divider {
-      width: 50px;
-      height: 4px;
-      background: #f4a460;
-      margin: 0.5rem 0;
-    }
-
-    .content-wrapper p {
-      margin: 0.5rem 0;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-
-      .image-wrapper {
-        height: 300px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Reviews Carousel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-nav {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .custom-nav:hover {
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
-  <div class="container-3">
+    <div class="container mt-5">
+        <h2 class="text-center">Client Reviews</h2>
+        <p class="text-center text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        
+        <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Reviewer 1">
+                        <h5 class="text-warning">99</h5>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit augue ac enim varius bibendum.</p>
+                        <p class="fw-bold">- Bershtain Saal</p>
+                    </div>
+                </div>
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Reviewer 2">
+                        <h5 class="text-warning">99</h5>
+                        <p class="text-muted">Etiam rhoncus elit aliquam facilisis pharetra. Vivamus facilisis lacus non velit suscipit pellentesque.</p>
+                        <p class="fw-bold">- Elizabeth Bazooka</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Custom Navigation Buttons -->
+            <div class="d-flex justify-content-between mt-3">
+                <span class="custom-nav" data-bs-target="#reviewsCarousel" data-bs-slide="prev">&lt;</span>
+                <span class="custom-nav" data-bs-target="#reviewsCarousel" data-bs-slide="next">&gt;</span>
+            </div>
+        </div>
+    </div>
     
-    <div class="content-wrapper-2">
-      <h2>Title for the masses</h2>
-      <div class="divider"></div>
-      <div class="feature">
-        <h2>Responsive design</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum sed nibh sit amet accumsan. Suspendisse posuere congue ante quis fringilla.</p>
-      </div>
-      <div class="feature">
-        <h2>One click install</h2>
-        <p>Suspendisse dignissim, turpis sed pellentesque semper, enim lacus pulvinar augue, non posuere tellus ex quis risus.</p>
-      </div>
-      <div class="feature">
-        <h2>Multi-purpose</h2>
-        <p>Proin nisl nibh, venenatis ut bibendum vel, mollis sit amet nibh. Integer iaculis justo lorem, maximus tristique elit venenatis nec.</p>
-      </div>
-    </div>
-    <div class="image-wrapper-2">
-      <div class="text-overlay">
-        <span>Best tips for</span>
-        <h1>grooms</h1>
-      </div>
-    </div>
-  </div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
