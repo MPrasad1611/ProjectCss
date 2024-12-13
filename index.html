@@ -1,167 +1,677 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Pricing Table</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Template</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="nav" >
+      <div class="logo">Jevelin <span>wdng</span></div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#port">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="#shop">Shop</a>
+      </div>
+    </div>
 
-        .pricing-section {
-            text-align: center;
-            padding: 50px 20px;
-        }
+    <div class="container-1" id="home">
+      <div class="text">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl93_qfxyeGDSufn0MvSMfshvYEGUJxAFzAA&s"
+          alt="Wedding Logo"
+        />
+        <span
+          style="
+            color: rgb(50, 177, 128);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+          "
+          >Wedding Template For</span
+        >
+        <span
+          style="
+            color: rgba(0, 149, 255, 0.873);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+              'Lucida Sans', Arial, sans-serif;
+            font-size: 50px;
+          "
+          >Wedding Planners</span
+        >
+        <button class="container-button">TAKE IT FOR SPIN</button>
+      </div>
+    </div>
 
-        .pricing-section h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+    <div class="responsive-container">
+      <div class="responsive-heading">Services We Provide</div>
+      <div class="responsive-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        iaculis varius cursus. Sed rhoncus, nisl non maximus molestie, erat quam
+        tincidunt orci, fermentum fermentum risus enim ut nisl.
+      </div>
+    </div>
 
-        .pricing-section p {
-            color: #777;
-            margin-bottom: 50px;
-        }
+    <div class="services-section">
+      <div class="service-block">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_1.jpg"
+          alt="Service 1"
+        />
+        <div class="service-content">
+          <h3 class="service-title">Fully Responsive</h3>
+          <p class="service-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+      </div>
+      <div class="service-block">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_2.jpg"
+          alt="Service 2"
+        />
+        <div class="service-content">
+          <h3 class="service-title">Friendly Support</h3>
+          <p class="service-description">
+            Proin non nunc non enim dictum vulputate.
+          </p>
+        </div>
+      </div>
+      <div class="service-block">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_ser_img_3.jpg"
+          alt="Service 3"
+        />
+        <div class="service-content">
+          <h3 class="service-title">Highly Customizable</h3>
+          <p class="service-description">
+            Curabitur cursus lectus sollicitudin eros ornare pulvinar.
+          </p>
+        </div>
+      </div>
+    </div>
 
-        .pricing-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+    <div class="subscribe-section">
+      <div class="subscribe-text">
+        <h1>Multi-purpose WordPress Theme</h1>
+        <p>Stunning website in your pocket!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="subscribe-form">
+        <input type="email" placeholder="Enter your email" required />
+        <button>Subscribe Now</button>
+      </div>
+    </div>
+    <div class="portfolio-section" id="port">
+      <h2 class="portfolio-title">Portfolio & Gallery</h2>
+      <p class="portfolio-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <div class="divider-2">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+        <div class="divider-line"></div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img1-951x1024.jpg"
+          alt="Hugs & Kisses"
+        />
+        <div class="content">
+          <h3 class="title">Hugs & Kisses</h3>
+          <p class="category">PEOPLE</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img2-1024x784.jpg"
+          alt="Every Guest Counts"
+        />
+        <div class="content">
+          <h3 class="title">Every Guest Counts</h3>
+          <p class="category">PEOPLE</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img3-1024x962.jpg"
+          alt="The bouquet"
+        />
+        <div class="content">
+          <h3 class="title">The Bouquet</h3>
+          <p class="category">ART</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img4-1024x962.jpg"
+          alt="Pretty tag"
+        />
+        <div class="content">
+          <h3 class="title">Pretty Tag</h3>
+          <p class="category">DECORATIONS</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img5-951x1024.jpg"
+          alt="Love & SunSet"
+        />
+        <div class="content">
+          <h3 class="title">Love & SunSet</h3>
+          <p class="category">ART</p>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img6-853x1024.jpg"
+          alt="Every Guest Counts"
+        />
+        <div class="content">
+          <h3 class="title">Kissing The Bride</h3>
+          <p class="category">PHOTOGRAPHY</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <p class="info-text">
+        Want to see more images? Just press “All images” on the right side!
+      </p>
+      <button class="cta-button">All Images</button>
+    </div>
+    <div class="container-2" id="blog">
+      <div class="image-wrapper">
+        <div class="text-overlay">
+          <span>Best tips for</span>
+          <h1>grooms</h1>
+        </div>
+      </div>
+      <div style="overflow: hidden; overflow-y: scroll" class="content-wrapper">
+        <h2>Title for the masses</h2>
+        <div class="divider"></div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum
+          sed nibh sit amet accumsan. Suspendisse posuere congue ante quis
+          fringilla. Suspendisse dignissim, turpis sed pellentesque semper, enim
+          lacus pulvinar augue, non posuere tellus ex quis risus.Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Cras interdum sed nibh
+          sit amet accumsan. Suspendisse posuere congue ante quis fringilla.
+          Suspendisse dignissim, turpis sed pellentesque semper, enim lacus
+          pulvinar augue, non posuere tellus ex quis risus. Suspendisse posuere
+          congue ante quis fringilla. Suspendisse dignissim, turpis sed
+          pellentesque semper, enim lacus pulvinar augue, non posuere tellus ex
+          quis risus.
+        </p>
+        <p>
+          Proin nisl nibh, venenatis ut bibendum vel, mollis sit amet nibh.
+          Integer iaculis justo lorem, maximus tristique elit venenatis nec.
+        </p>
+      </div>
+    </div>
+    <div class="container-3">
+      <div
+        style="overflow: hidden; overflow-y: scroll"
+        class="content-wrapper-2"
+      >
+        <h1>Title for the masses</h1>
+        <hr />
+        <div class="feature">
+          <h2>Responsive design</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            interdum sed nibh sit amet accumsan. Suspendisse posuere congue ante
+            quis fringilla.
+          </p>
+        </div>
+        <div class="feature">
+          <h2>One click install</h2>
+          <p>
+            Suspendisse dignissim, turpis sed pellentesque semper, enim lacus
+            pulvinar augue, non posuere tellus ex quis risus.
+          </p>
+        </div>
+        <div class="feature">
+          <h2>Multi-purpose</h2>
+          <p>
+            Proin nisl nibh, venenatis ut bibendum vel, mollis sit amet nibh.
+            Integer iaculis justo lorem, maximus tristique elit venenatis nec.
+          </p>
+        </div>
+      </div>
+      <div class="image-wrapper-2">
+        <div class="text-overlay-2">
+          <span>Best tips for</span>
+          <h1>bride</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container-4 mt-5">
+      <h2 class="text-center">Client reviews</h2>
+      <p class="text-center text-muted">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
 
-        .pricing-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            max-width: 350px;
-            width: 100%;
-            text-align: center;
-            height: 500px; /* Increased height */
-        }
+      <div
+        id="reviewsCarousel"
+        class="custom-carousel carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="Reviewer 1"
+              />
+              <h5 class="mt-3 text-warning">99</h5>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                suscipit augue ac enim varius bibendum.
+              </p>
+              <p class="fw-bold">- Bershtain Saal</p>
+            </div>
+          </div>
 
-        .pricing-card.highlight {
-            background: url('path/to/your/image.jpg') center/cover no-repeat; /* Added background image */
-            color: #fff;
-        }
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <img
+                src="https://media.istockphoto.com/id/1326417862/photo/young-woman-laughing-while-relaxing-at-home.jpg?s=612x612&w=0&k=20&c=cd8e6RBGOe4b8a8vTcKW0Jo9JONv1bKSMTKcxaCra8c="
+                alt="Reviewer 2"
+              />
+              <h5 class="mt-3 text-warning">99</h5>
+              <p class="text-muted">
+                Etiam rhoncus elit aliquam facilisis pharetra. Vivamus facilisis
+                lacus non velit suscipit pellentesque.
+              </p>
+              <p class="fw-bold">- Elizabeth Bazooka</p>
+            </div>
+          </div>
+        </div>
 
-        .pricing-card h3 {
-            font-size: 1.8em;
-            margin: 15px 0;
-        }
+        <div class="nav-buttons-2">
+          <span data-bs-target="#reviewsCarousel" data-bs-slide="prev"
+            >&lt;</span
+          >
+          <span data-bs-target="#reviewsCarousel" data-bs-slide="next"
+            >&gt;</span
+          >
+        </div>
+      </div>
+    </div>
 
-        .pricing-card .price {
-            font-size: 3em;
-            margin: 20px 0;
-            font-weight: bold;
-        }
+    <section class="pricing-section" id="shop">
+      <h1>Price List & Special Offers</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-        .pricing-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 30px 0;
-        }
-
-        .pricing-card ul li {
-            margin: 15px 0;
-            color: #555;
-            border-bottom: 1px solid #ddd; /* Divider line */
-            padding-bottom: 10px;
-        }
-
-        .pricing-card ul li.unavailable {
-            text-decoration: line-through;
-            color: #aaa;
-        }
-
-        .pricing-card button {
-            padding: 15px 30px;
-            background: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .pricing-card button:hover {
-            background: #0056b3;
-        }
-
-        @media (max-width: 768px) {
-            .pricing-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<section class="pricing-section">
-    <h1>Price List & Special Offers</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-    <div class="pricing-container">
+      <div class="pricing-container">
         <div class="pricing-card">
-            <h3>Basic</h3>
-            <p class="price">$42</p>
-            <ul>
-                <li>Clean Design</li>
-                <li>Database</li>
-                <li>Users</li>
-                <li class="unavailable">Multi-Purpose</li>
-                <li>Light & Fast</li>
-            </ul>
-            <button>Purchase</button>
+          <h3>Basic</h3>
+          <p class="price">$42</p>
+          <ul>
+            <li>Clean Design</li>
+            <li>Database</li>
+            <li>Users</li>
+            <li class="unavailable">Multi-Purpose</li>
+            <li>Light & Fast</li>
+          </ul>
+          <button >Purchase</button>
         </div>
 
         <div class="pricing-card highlight">
-            <h3>Value</h3>
-            <p class="price">$56</p>
-            <ul>
-                <li>Clean Design</li>
-                <li>Database</li>
-                <li>Users</li>
-                <li class="unavailable">Multi-Purpose</li>
-                <li>Light & Fast</li>
-            </ul>
-            <button>Purchase</button>
+          <h3>Value</h3>
+          <p class="price">$56</p>
+          <ul>
+            <li>Clean Design</li>
+            <li>Database</li>
+            <li>Users</li>
+            <li class="unavailable">Multi-Purpose</li>
+            <li>Light & Fast</li>
+          </ul>
+          <button>Purchase</button>
         </div>
 
         <div class="pricing-card">
-            <h3>Premium</h3>
-            <p class="price">$77</p>
-            <ul>
-                <li>Clean Design</li>
-                <li>Database</li>
-                <li>Users</li>
-                <li class="unavailable">Multi-Purpose</li>
-                <li>Light & Fast</li>
-            </ul>
-            <button>Purchase</button>
+          <h3>Premium</h3>
+          <p class="price">$77</p>
+          <ul>
+            <li>Clean Design</li>
+            <li>Database</li>
+            <li>Users</li>
+            <li class="unavailable">Multi-Purpose</li>
+            <li>Light & Fast</li>
+          </ul>
+          <button>Purchase</button>
         </div>
 
         <div class="pricing-card">
-            <h3>All-in-One</h3>
-            <p class="price">$145</p>
-            <ul>
-                <li>Clean Design</li>
-                <li>Database</li>
-                <li>Users</li>
-                <li>Multi-Purpose</li>
-                <li>Light & Fast</li>
-            </ul>
-            <button>Purchase</button>
+          <h3>All-in-One</h3>
+          <p class="price">$145</p>
+          <ul>
+            <li>Clean Design</li>
+            <li>Database</li>
+            <li>Users</li>
+            <li>Multi-Purpose</li>
+            <li>Light & Fast</li>
+          </ul>
+          <button>Purchase</button>
         </div>
+      </div>
+    </section>
+    <div class="contact-container">
+      <div class="form-section">
+        <h2>Send us a message</h2>
+        <p>Donec lacinia efficitur finibus.</p>
+        <form>
+          <div class="input-group">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+          </div>
+          <textarea placeholder="Message"></textarea>
+          <select>
+            <option>0$ - 500$</option>
+            <option>500$ - 1500$</option>
+            <option>1500$ - 2000$</option>
+            <option>2000$ - 5000$</option>
+          </select>
+          <button type="submit">Send a Message</button>
+        </form>
+      </div>
+      <div class="info-section">
+        <h2>Contact information</h2>
+        <p>Aenean a ullamcorper justo...</p>
+        <div class="details">
+          <p><strong>Address:</strong> Street number and town name 23</p>
+          <p><strong>Email:</strong> info@brandname.com</p>
+          <p><strong>Phone:</strong> 342 552 521</p>
+          <p><strong>Working hours:</strong> Mon.-Fri. 11AM-19PM</p>
+        </div>
+        <div class="social-icons">
+          <svg
+            style="height: 30px"
+            fill="#000000"
+            viewBox="-9.5 0 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>facebook</title>
+              <path
+                d="M7.44 26.68h-2.92c-1 0-1.84-0.84-1.84-1.84v-6.56h-0.84c-1 0-1.84-0.84-1.84-1.84v-2.48c0-1 0.84-1.84 1.84-1.84h0.88v-0.8c0-3.68 2.12-6 5.56-6 1.2 0 2.24 0.080 2.68 0.12 0.92 0.12 1.6 0.92 1.6 1.84v2.48c0 1-0.84 1.84-1.84 1.84h-1.36v0.52h1.28c1 0 1.84 0.84 1.84 1.84 0 0.12 0 0.2-0.040 0.32l-0.4 2.4c-0.12 0.88-0.92 1.56-1.84 1.56h-0.84v6.56c-0.040 1.040-0.88 1.88-1.92 1.88zM1.84 13.8c-0.080 0-0.16 0.080-0.16 0.16v2.48c0 0.080 0.080 0.16 0.16 0.16h1.72c0.48 0 0.84 0.36 0.84 0.84v7.36c0 0.080 0.080 0.16 0.16 0.16h2.92c0.080 0 0.16-0.080 0.16-0.16v-7.36c0-0.48 0.36-0.84 0.84-0.84h1.68c0.080 0 0.16-0.080 0.16-0.16l0.4-2.48c0-0.080-0.080-0.16-0.16-0.16h-2.12c-0.48 0-0.84-0.36-0.84-0.84v-1.68c0-0.36 0.040-0.6 0.12-0.8s0.2-0.32 0.4-0.4c0.2-0.12 0.48-0.16 0.88-0.16h1.68c0.080 0 0.16-0.080 0.16-0.16v-2.48c0-0.080-0.080-0.16-0.16-0.16-0.32-0.040-1.32-0.12-2.44-0.12-3.36 0-3.88 2.72-3.88 4.32v1.64c0 0.48-0.36 0.84-0.84 0.84 0 0-1.68 0-1.68 0z"
+              ></path>
+            </g>
+          </svg>
+          <svg
+            style="height: 30px"
+            viewBox="0 0 48 48"
+            id="Layer_2"
+            data-name="Layer 2"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                    stroke: #000000;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                  }
+                </style>
+              </defs>
+              <path
+                class="cls-1"
+                d="M38.74,16.55v1c0,10.07-7.64,21.61-21.62,21.61A21.14,21.14,0,0,1,5.5,35.71a12.22,12.22,0,0,0,1.81.11,15.25,15.25,0,0,0,9.44-3.24,7.56,7.56,0,0,1-7.1-5.29,6.9,6.9,0,0,0,1.44.15,7.53,7.53,0,0,0,2-.27A7.57,7.57,0,0,1,7,19.72v-.1a7.42,7.42,0,0,0,3.44.94A7.54,7.54,0,0,1,8.05,10.5a21.58,21.58,0,0,0,15.68,7.94,6.38,6.38,0,0,1-.21-1.74,7.55,7.55,0,0,1,13.17-5.31,15.59,15.59,0,0,0,4.83-1.85,7.65,7.65,0,0,1-3.39,4.27,15.87,15.87,0,0,0,4.37-1.26,15.56,15.56,0,0,1-3.76,4Z"
+              ></path>
+            </g>
+          </svg>
+          <svg
+            style="height: 30px"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <defs>
+                <style>
+                  .a {
+                    fill: none;
+                    stroke: #000000;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                  }
+                </style>
+              </defs>
+              <path
+                class="a"
+                d="M43.1124,14.394a5.0056,5.0056,0,0,0-3.5332-3.5332c-2.3145-.8936-24.7326-1.3314-31.2358.0256A5.0059,5.0059,0,0,0,4.81,14.42c-1.0446,4.583-1.1239,14.4914.0256,19.1767A5.006,5.006,0,0,0,8.369,37.13c4.5829,1.0548,26.3712,1.2033,31.2358,0a5.0057,5.0057,0,0,0,3.5332-3.5333C44.2518,28.6037,44.3311,19.31,43.1124,14.394Z"
+              ></path>
+              <path
+                class="a"
+                d="M30.5669,23.9952,20.1208,18.004V29.9863Z"
+              ></path>
+            </g>
+          </svg>
+          <svg
+            style="height: 25px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                fill="#0F0F0F"
+              ></path>
+              <path
+                d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                fill="#0F0F0F"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                fill="#0F0F0F"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
     </div>
-</section>
-
-</body>
+    <div class="custom-sections-1">
+      <div class="content-wrappers-1">
+        <div class="branding">
+          <h1><span class="head">jevelin</span> <span>wdng</span></h1>
+          <p>
+            Duis semper mauris vitae purus rhoncus suscipit. Nunc dictum dapibus
+            tellus, at viverra risus pharetra id. Nulla facilisi.
+          </p>
+          <div class="social-icons-1">
+            <svg
+              style="height: 30px"
+              fill="#000000"
+              viewBox="-9.5 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>facebook</title>
+                <path
+                  d="M7.44 26.68h-2.92c-1 0-1.84-0.84-1.84-1.84v-6.56h-0.84c-1 0-1.84-0.84-1.84-1.84v-2.48c0-1 0.84-1.84 1.84-1.84h0.88v-0.8c0-3.68 2.12-6 5.56-6 1.2 0 2.24 0.080 2.68 0.12 0.92 0.12 1.6 0.92 1.6 1.84v2.48c0 1-0.84 1.84-1.84 1.84h-1.36v0.52h1.28c1 0 1.84 0.84 1.84 1.84 0 0.12 0 0.2-0.040 0.32l-0.4 2.4c-0.12 0.88-0.92 1.56-1.84 1.56h-0.84v6.56c-0.040 1.040-0.88 1.88-1.92 1.88zM1.84 13.8c-0.080 0-0.16 0.080-0.16 0.16v2.48c0 0.080 0.080 0.16 0.16 0.16h1.72c0.48 0 0.84 0.36 0.84 0.84v7.36c0 0.080 0.080 0.16 0.16 0.16h2.92c0.080 0 0.16-0.080 0.16-0.16v-7.36c0-0.48 0.36-0.84 0.84-0.84h1.68c0.080 0 0.16-0.080 0.16-0.16l0.4-2.48c0-0.080-0.080-0.16-0.16-0.16h-2.12c-0.48 0-0.84-0.36-0.84-0.84v-1.68c0-0.36 0.040-0.6 0.12-0.8s0.2-0.32 0.4-0.4c0.2-0.12 0.48-0.16 0.88-0.16h1.68c0.080 0 0.16-0.080 0.16-0.16v-2.48c0-0.080-0.080-0.16-0.16-0.16-0.32-0.040-1.32-0.12-2.44-0.12-3.36 0-3.88 2.72-3.88 4.32v1.64c0 0.48-0.36 0.84-0.84 0.84 0 0-1.68 0-1.68 0z"
+                ></path>
+              </g>
+            </svg>
+            <svg
+              style="height: 30px"
+              viewBox="0 0 48 48"
+              id="Layer_2"
+              data-name="Layer 2"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#000000"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                      stroke: #000000;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="cls-1"
+                  d="M38.74,16.55v1c0,10.07-7.64,21.61-21.62,21.61A21.14,21.14,0,0,1,5.5,35.71a12.22,12.22,0,0,0,1.81.11,15.25,15.25,0,0,0,9.44-3.24,7.56,7.56,0,0,1-7.1-5.29,6.9,6.9,0,0,0,1.44.15,7.53,7.53,0,0,0,2-.27A7.57,7.57,0,0,1,7,19.72v-.1a7.42,7.42,0,0,0,3.44.94A7.54,7.54,0,0,1,8.05,10.5a21.58,21.58,0,0,0,15.68,7.94,6.38,6.38,0,0,1-.21-1.74,7.55,7.55,0,0,1,13.17-5.31,15.59,15.59,0,0,0,4.83-1.85,7.65,7.65,0,0,1-3.39,4.27,15.87,15.87,0,0,0,4.37-1.26,15.56,15.56,0,0,1-3.76,4Z"
+                ></path>
+              </g>
+            </svg>
+            <svg
+              style="height: 30px"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#000000"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <defs>
+                  <style>
+                    .a {
+                      fill: none;
+                      stroke: #000000;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="a"
+                  d="M43.1124,14.394a5.0056,5.0056,0,0,0-3.5332-3.5332c-2.3145-.8936-24.7326-1.3314-31.2358.0256A5.0059,5.0059,0,0,0,4.81,14.42c-1.0446,4.583-1.1239,14.4914.0256,19.1767A5.006,5.006,0,0,0,8.369,37.13c4.5829,1.0548,26.3712,1.2033,31.2358,0a5.0057,5.0057,0,0,0,3.5332-3.5333C44.2518,28.6037,44.3311,19.31,43.1124,14.394Z"
+                ></path>
+                <path
+                  class="a"
+                  d="M30.5669,23.9952,20.1208,18.004V29.9863Z"
+                ></path>
+              </g>
+            </svg>
+            <svg
+              style="height: 30px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                  fill="#0F0F0F"
+                ></path>
+                <path
+                  d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                  fill="#0F0F0F"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                  fill="#0F0F0F"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="info-wrappers-1">
+          <div class="recent-posts-1">
+            <h3 style="color: crimson">Recent Posts</h3>
+            <ul>
+              <li>Best hairstyle for summer</li>
+              <li>Best places for celebrations</li>
+              <li>Not so complicated title</li>
+            </ul>
+          </div>
+          <div class="latest-projects-1">
+            <h3 style="color: black">Latest Projects</h3>
+            <div class="project-images-1">
+              <img
+                src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img6-853x1024.jpg"
+                alt="Project 1"
+              />
+              <img
+                src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img3-1024x962.jpg"
+                alt="Project 2"
+              />
+              <img
+                src="https://jevelin.shufflehound.com/wedding/wp-content/uploads/sites/3/2016/05/Home_7_gal_img1-951x1024.jpg"
+                alt="Project 3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
